@@ -539,7 +539,7 @@
            <schema_name/>
            </partitioning>
        <formula><field_name>GetJsonTransJust</field_name>
-<formula_string>&#x5b;baseUrl&#x5d;&#x26;&#x22;customers&#x2f;&#x22;&#x26;&#x5b;companyId&#x5d;&#x26;&#x22;&#x2f;reportInputData&#x3f;startDate&#x3d;&#x22;&#x26;&#x5b;startDate&#x5d;&#x26;&#x22;&#x26;endDate&#x3d;&#x22;&#x26;&#x5b;finalEndDate&#x5d;&#x26;&#x22;&#x26;fillScannedReceipts&#x3d;&#x22;&#x26;&#x5b;fillScannedReceipts&#x5d;&#x26;&#x22;&#x26;fillJustifications&#x3d;&#x22;&#x26;&#x5b;fillJustifications&#x5d;&#x26;&#x22;&#x26;pageNumber&#x3d;&#x22;&#x26;&#x5b;pageNo&#x5d;&#x26;&#x22;&#x26;pageSize&#x3d;&#x22;&#x26;&#x5b;pageSize&#x5d;</formula_string>
+<formula_string>&#x5b;baseUrl&#x5d;&#x26;&#x22;customers&#x2f;&#x22;&#x26;&#x5b;companyId&#x5d;&#x26;&#x22;&#x2f;reportInputData&#x3f;startDate&#x3d;&#x22;&#x26;&#x5b;startDate&#x5d;&#x26;&#x22;&#x26;endDate&#x3d;&#x22;&#x26;&#x5b;finalEndDate&#x5d;&#x26;&#x22;&#x26;fillScannedReceipts&#x3d;&#x22;&#x26;&#x5b;fillScannedReceipts&#x5d;&#x26;&#x22;&#x26;fillJustifications&#x3d;&#x22;&#x26;&#x5b;fillJustifications&#x5d;</formula_string>
 <value_type>String</value_type>
 <value_length>200</value_length>
 <value_precision>-1</value_precision>

@@ -99,7 +99,6 @@
   <hop> <from>Add constants</from><to>Set Variables 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Add constants 2</from><to>Set Variables 3</to><enabled>Y</enabled> </hop>
   <hop> <from>Add constants 3</from><to>Select values 3</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculator</from><to>Formula 2 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Detect empty stream</from><to>parse Json transactions and justifications</to><enabled>Y</enabled> </hop>
   <hop> <from>Detect empty stream 2</from><to>Add constants 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Filter rows 2</from><to>Add constants 3</to><enabled>Y</enabled> </hop>
@@ -143,6 +142,7 @@
   <hop> <from>JSON Output</from><to>Set Variables</to><enabled>Y</enabled> </hop>
   <hop> <from>Add constants 3 2 2</from><to>Select values 5 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values 5 2</from><to>Calculator 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>Formula 2 2</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Abort</name>
@@ -539,7 +539,7 @@
            <schema_name/>
            </partitioning>
        <formula><field_name>GetJsonTransJust</field_name>
-<formula_string>&#x5b;baseUrl&#x5d;&#x26;&#x22;customers&#x2f;&#x22;&#x26;&#x5b;companyId&#x5d;&#x26;&#x22;&#x2f;reportInputData&#x3f;startDate&#x3d;&#x22;&#x26;&#x5b;startDate&#x5d;&#x26;&#x22;&#x26;endDate&#x3d;&#x22;&#x26;&#x5b;finalEndDate&#x5d;&#x26;&#x22;&#x26;fillScannedReceipts&#x3d;&#x22;&#x26;&#x5b;fillScannedReceipts&#x5d;&#x26;&#x22;&#x26;fillJustifications&#x3d;&#x22;&#x26;&#x5b;fillJustifications&#x5d;&#x26;&#x22;&#x26;pageNumber&#x3d;&#x22;&#x26;&#x5b;pageNo&#x5d;&#x26;&#x22;&#x26;pageSize&#x3d;&#x22;&#x26;&#x5b;pageSize&#x5d;</formula_string>
+<formula_string>&#x5b;baseUrl&#x5d;&#x26;&#x22;customers&#x2f;&#x22;&#x26;&#x5b;companyId&#x5d;&#x26;&#x22;&#x2f;reportInputData&#x3f;startDate&#x3d;&#x22;&#x26;&#x5b;startDate&#x5d;&#x26;&#x22;&#x26;endDate&#x3d;&#x22;&#x26;&#x5b;finalEndDate&#x5d;&#x26;&#x22;&#x26;fillScannedReceipts&#x3d;&#x22;&#x26;&#x5b;fillScannedReceipts&#x5d;&#x26;&#x22;&#x26;fillJustifications&#x3d;&#x22;&#x26;&#x5b;fillJustifications&#x5d;</formula_string>
 <value_type>String</value_type>
 <value_length>200</value_length>
 <value_precision>-1</value_precision>
@@ -547,8 +547,8 @@
 </formula>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>272</xloc>
-      <yloc>272</yloc>
+      <xloc>304</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
