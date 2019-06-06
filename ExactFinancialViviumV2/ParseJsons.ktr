@@ -1,0 +1,2125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>ParseJsons</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>Token</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>baseUrl</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>companyId</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>companyName</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>endDate</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonCompany</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonExport</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonJustifications</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonTransactions</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>startDate</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>transactionIdentifier</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>userId</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>userName</name>
+            <default_value/>
+            <description/>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2016&#x2f;10&#x2f;05 12&#x3a;05&#x3a;51.344</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2016&#x2f;10&#x2f;05 12&#x3a;05&#x3a;51.344</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>get data&#xa;</note>
+      <xloc>16</xloc>
+      <yloc>32</yloc>
+      <width>62</width>
+      <heigth>44</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>If no data, then we do need to continue</note>
+      <xloc>16</xloc>
+      <yloc>144</yloc>
+      <width>260</width>
+      <heigth>27</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>parse transactions</note>
+      <xloc>16</xloc>
+      <yloc>304</yloc>
+      <width>131</width>
+      <heigth>27</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>parse settings&#xa;</note>
+      <xloc>16</xloc>
+      <yloc>400</yloc>
+      <width>102</width>
+      <heigth>44</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Parse justifications&#xa;</note>
+      <xloc>16</xloc>
+      <yloc>496</yloc>
+      <width>133</width>
+      <heigth>44</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Calcualte total justifications per transactions</note>
+      <xloc>880</xloc>
+      <yloc>640</yloc>
+      <width>295</width>
+      <heigth>27</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <order>
+  <hop> <from>Calculator</from><to>Remove all non-used fields</to><enabled>Y</enabled> </hop>
+  <hop> <from>Default Justification Row</from><to>Parse JustificationItems</to><enabled>Y</enabled> </hop>
+  <hop> <from>Detect empty stream - justificationItems</from><to>JustificationItems Rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Detect empty stream - justifications</from><to>Justification Rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Dummy &#x28;do nothing&#x29; 2</from><to>Multiway Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows </from><to>Inputs received</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows </from><to>No inputs received</to><enabled>Y</enabled> </hop>
+  <hop> <from>Formula -ifEmpty-</from><to>Modified Java Script Value- Check if Justification types are allowed </to><enabled>Y</enabled> </hop>
+  <hop> <from>Formula -ifEmpty- global</from><to>Formula -ifEmpty-</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Variables</from><to>Formula -ifEmpty- global</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Parse JustificationItems costCenters, costType, vatCode</to><enabled>Y</enabled> </hop>
+  <hop> <from>Inputs received</from><to>Parse jsonExport</to><enabled>Y</enabled> </hop>
+  <hop> <from>Inputs received</from><to>parse jsonCompany</to><enabled>Y</enabled> </hop>
+  <hop> <from>Justification Rows</from><to>Parse Justifications Main</to><enabled>Y</enabled> </hop>
+  <hop> <from>JustificationItems Rows</from><to>Default Justification Row</to><enabled>Y</enabled> </hop>
+  <hop> <from>Modified Java Script Value- Check if Justification types are allowed </from><to>Filter rows </to><enabled>Y</enabled> </hop>
+  <hop> <from>Multiway Merge Join</from><to>Copy rows to result</to><enabled>Y</enabled> </hop>
+  <hop> <from>Parse JustificationItems</from><to>Sort rows 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Parse JustificationItems costCenters, costType, vatCode</from><to>Remove all non-used fields 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Parse Justifications Main</from><to>Detect empty stream - justificationItems</to><enabled>Y</enabled> </hop>
+  <hop> <from>Parse Justifications Main</from><to>JustificationItems Rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Parse jsonExport</from><to>Detect empty stream - justifications</to><enabled>Y</enabled> </hop>
+  <hop> <from>Parse jsonExport</from><to>Justification Rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Remove all non-used fields</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Remove all non-used fields 2</from><to>Multiway Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set local date</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Settings 2</from><to>Get Variables</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2</from><to>Multiway Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 3</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 3</from><to>clean before transaction total</to><enabled>Y</enabled> </hop>
+  <hop> <from>clean before transaction total</from><to>Calculate total justiification amount</to><enabled>Y</enabled> </hop>
+  <hop> <from>TransactionRows</from><to>parse Transactions</to><enabled>Y</enabled> </hop>
+  <hop> <from>parse Transactions</from><to>Rename and Convert </to><enabled>Y</enabled> </hop>
+  <hop> <from>parse jsonCompany</from><to>TransactionRows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Rename and Convert </from><to>Set local date</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculate total justiification amount</from><to>clean before transaction total 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>clean before transaction total 2</from><to>Dummy &#x28;do nothing&#x29; 2</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Calculate total justiification amount</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>internalTxnId</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>AmountForeignCurrency</aggregate>
+          <subject>items_amount</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1280</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>Date</field_name>
+<calc_type>REMOVE_TIME_FROM_DATE</calc_type>
+<field_a>Date and time</field_a>
+<field_b/>
+<field_c/>
+<value_type>None</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1216</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Copy rows to result</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2064</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Default Justification Row</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>justificationItem_row</name>
+        <value>&#x7b;&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Detect empty stream - justificationItems</name>
+    <type>DetectEmptyStream</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Detect empty stream - justifications</name>
+    <type>DetectEmptyStream</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>256</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29; 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1680</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows </name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>No inputs received</send_true_to>
+<send_false_to>Inputs received</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>jsonTransactions</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <leftvalue>jsonJustifications</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <leftvalue>jsonTrans-isEmpty</leftvalue>
+   <function>&#x3d;</function>
+   <rightvalue/>
+   <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value>   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>OR</operator>
+   <leftvalue>jsonJusti_isEmpty</leftvalue>
+   <function>&#x3d;</function>
+   <rightvalue/>
+   <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>144</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Formula -ifEmpty-</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>jsonCompany</field_name>
+<formula_string>if&#x28;len&#x28;&#x5b;jsonCompany_in&#x5d;&#x29;&#x3c;2&#x3b;&#x5b;default_jsonCompany&#x5d;&#x3b;&#x5b;jsonCompany_in&#x5d;&#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>1000</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>jsonExport</field_name>
+<formula_string>if&#x28;len&#x28;&#x5b;jsonExport_in&#x5d;&#x29;&#x3c;2&#x3b;&#x5b;default_jsonExport&#x5d;&#x3b;&#x5b;jsonExport_in&#x5d;&#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>1000</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>jsonTrans-isEmpty</field_name>
+<formula_string>if&#x28;len&#x28;&#x5b;jsonTransactions&#x5d;&#x29;&#x3c;5&#x3b;1&#x3b;0&#x29;</formula_string>
+<value_type>Integer</value_type>
+<value_length>1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>jsonJusti_isEmpty</field_name>
+<formula_string>if&#x28;len&#x28;&#x5b;jsonJustifications&#x5d;&#x29;&#x3c;5&#x3b;1&#x3b;0&#x29;</formula_string>
+<value_type>Integer</value_type>
+<value_length>1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>560</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Formula -ifEmpty- global</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>jsonTransactions</field_name>
+<formula_string>if&#x28;len&#x28;&#x5b;jsonTransactions_global&#x5d;&#x29;&#x3c;25&#x3b;&#x5b;jsonTransactions_local&#x5d;&#x3b;&#x5b;jsonTransactions_global&#x5d;&#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+       <formula><field_name>jsonJustifications</field_name>
+<formula_string>if&#x28;len&#x28;&#x5b;jsonJustifications_global&#x5d;&#x29;&#x3c;25&#x3b;&#x5b;jsonJustifications_local&#x5d;&#x3b;&#x5b;jsonJustifications_global&#x5d;&#x29;</formula_string>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<replace_field/>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Variables</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Token</name>
+        <variable>&#x24;&#x7b;TOKEN&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>jsonCompany_in</name>
+        <variable>&#x24;&#x7b;jsonCompany&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>jsonExport_in</name>
+        <variable>&#x24;&#x7b;jsonExport&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>startDate</name>
+        <variable>&#x24;&#x7b;startDate&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>endDate</name>
+        <variable>&#x24;&#x7b;endDate&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>baseUrl</name>
+        <variable>&#x24;&#x7b;baseUrl&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>companyId</name>
+        <variable>&#x24;&#x7b;companyId&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>companyName</name>
+        <variable>&#x24;&#x7b;companyName&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>userId</name>
+        <variable>&#x24;&#x7b;userId&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>userName</name>
+        <variable>&#x24;&#x7b;userName&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>transactionIdentifier</name>
+        <variable>&#x24;&#x7b;transactionIdentifier&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>jsonTransactions_global</name>
+        <variable>&#x24;&#x7b;JSONTRANSACTIONS&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>jsonTransactions_local</name>
+        <variable>&#x24;&#x7b;jsonTransactions&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>jsonJustifications_local</name>
+        <variable>&#x24;&#x7b;jsonJustifications&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>jsonJustifications_global</name>
+        <variable>&#x24;&#x7b;JSONJUSTIFICATIONS&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>240</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>items_vatCode</name>
+        <value>&#x7b;&#xa;        &#x22;vatCodeId&#x22;&#x3a; null,&#xa;        &#x22;vatCodeDescription&#x22;&#x3a; null,&#xa;        &#x22;vatCodeCode&#x22;&#x3a; null,&#xa;        &#x22;vatCodePercentage&#x22;&#x3a; null,&#xa;        &#x22;vatCodeActive&#x22;&#x3a; false&#xa;      &#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>items_costType</name>
+        <value>&#x7b;&#xa;        &#x22;costTypeId&#x22;&#x3a; null,&#xa;        &#x22;costTypeDescription&#x22;&#x3a; null,&#xa;        &#x22;costTypeExternalLedger&#x22;&#x3a; null,&#xa;        &#x22;costTypeActive&#x22;&#x3a; false&#xa;      &#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>items_costCenter</name>
+        <value>&#x7b;&#xa;        &#x22;costCenterId&#x22;&#x3a; null,&#xa;        &#x22;costCenterDescription&#x22;&#x3a; null,&#xa;        &#x22;costCenterExternalLedger&#x22;&#x3a; null,&#xa;        &#x22;costCenterActive&#x22;&#x3a; false&#xa;&#x7d;</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1088</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Inputs received</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>144</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Justification Rows</name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <IsIgnoreEmptyFile>Y</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <rownum_field/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>justification_row</name>
+        <path>&#x2a;</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField>jsonJustifications</valueField>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>144</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JustificationItems Rows</name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <IsIgnoreEmptyFile>Y</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <rownum_field/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>justificationItem_row</name>
+        <path>&#x2a;</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField>items</valueField>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>480</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Modified Java Script Value- Check if Justification types are allowed </name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#x2f;&#x2f;By Erik Seveke&#xa;&#x2f;&#x2f; NOTE&#x3a; when you get an useless error message&#x3f;&#xa;&#x2f;&#x2f; Are you sure the json is formated correctly &#x28;i.e. also commas&#x29;&#xa;&#xa;var txn_types &#x3d; getFromMap&#x28;&#x27;justificationTypes&#x27;,jsonCompany&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;trans_Status &#x3d; CONTINUE_TRANSFORMATION&#x3b;&#xa;for &#x28;var i&#x3d;0&#x3b;getOcuranceString&#x28;txn_types,&#x22;,&#x22;&#x29;&#x3b;i&#x2b;&#x2b;&#x29; &#xa;&#x7b;&#xa;	if&#x28;getOcuranceString&#x28;AllowedJustificationTypes,&#x27;&#x22;&#x27;&#x2b;txn_types&#x5b;i&#x5d;&#x2b;&#x27;&#x22;&#x27;&#x29;&#x3d;&#x3d;0&#x29; &#xa;	&#x7b;&#xa;		&#x2f;&#x2f;&#xa;		&#x2f;&#x2f; writeToLog&#x28;var,var&#x29;&#x3b;&#xa;		&#x2f;&#x2f; 1&#x3a; String - The Type of the Log&#xa;		&#x2f;&#x2f; d - Debug&#xa;		&#x2f;&#x2f; l - Detailed&#xa;		&#x2f;&#x2f; e - Error&#xa;		&#x2f;&#x2f; m - Minimal&#xa;		&#x2f;&#x2f; r - RowLevel&#xa;		&#x2f;&#x2f;&#xa;    writeToLog&#x28;&#x22;e&#x22;, &#x22;Error by SimpledCard Pentaho&#x3a; There are justification types configured in company setting json, that are not in the AllowedJustificationTypes variable &#x28;in Pentaho script&#x29;&#x22;&#x29;&#x3b;&#xa;&#xa;		&#x2f;&#x2f;If i use SKI&#x7b;P_T then the log will show the Error above, but I&#x27;m not sure if the Simpled Java Wrapper will detect it&#xa;		&#x2f;&#x2f; so just to be sure, I have made it a hard error&#xa;		&#x2f;&#x2f;trans_Status &#x3d; SKIP_TRANSFORMATION&#x3b;&#xa;	    trans_Status &#x3d; ERROR_TRANSFORMATION&#x3b;&#xa;&#xa;	&#x7d;&#xa;	&#xa;	if &#x28;i&#x3d;&#x3d;getOcuranceString&#x28;txn_types,&#x22;,&#x22;&#x29;&#x29; &#x7b;break&#x3b;&#x7d;&#xa;&#x7d;&#xa;</jsScript_script>
+      </jsScript>      <jsScript>        <jsScript_type>1</jsScript_type>
+        <jsScript_name>Item_0</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xa;  try&#x7b;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xa;  &#x7d;&#xa;  catch&#x28;e&#x29;&#x7b;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xa;   var nr_errors &#x3d; 1&#x3b;&#xa;   var field &#x3d; &#x22;jsonRow&#x22;&#x3b;&#xa;   var errcode &#x3d; &#x22;JSON_PARSE&#x22;&#x3b;&#xa;   _step_.putError&#x28;getInputRowMeta&#x28;&#x29;, row, nr_errors, message, field, errcode&#x29;&#x3b;&#xa;   trans_Status &#x3d; SKIP_TRANSFORMATION&#x3b;&#xa;   return null&#x3b;&#xa;  &#x7d;&#xa;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xa;   return null&#x3b;&#xa;  &#x7d;&#xa;  trans_Status &#x3d; CONTINUE_TRANSFORMATION&#x3b;&#xa;  return map&#x5b;key&#x5d;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>896</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Multiway Merge Join</name>
+    <type>MultiwayMergeJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <join_type>FULL OUTER</join_type>
+    <step0>Remove all non-used fields 2</step0>
+    <step1>Sort rows 2</step1>
+    <step2>Dummy &#x28;do nothing&#x29; 2</step2>
+    <number_input>3</number_input>
+    <keys>
+      <key>internalTxnId</key>
+      <key>internalTxnId_from_transactions</key>
+      <key>internalTxnId</key>
+    </keys>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1888</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>No inputs received</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Parse JustificationItems</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xd;&#xa;  try&#x7b;&#xd;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  catch&#x28;e&#x29;&#x7b;&#xd;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xd;&#xa;   writeToLog&#x28;&#x27;e&#x27;, message&#x29;&#x3b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;&#xd;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  return map&#x5b;key&#x5d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;var items_description &#x3d; getFromMap&#x28;&#x27;itemDescription&#x27;, justificationItem_row&#x29;&#x3b;&#xd;&#xa;var items_amount &#x3d; getFromMap&#x28;&#x27;itemAmount&#x27;, justificationItem_row&#x29;&#x3b;&#xd;&#xa;var items_vatCode &#x3d; getFromMap&#x28;&#x27;itemVatCode&#x27;, justificationItem_row&#x29;&#x3b;&#xa;var items_costType &#x3d; getFromMap&#x28;&#x27;itemCostType&#x27;, justificationItem_row&#x29;&#x3b;&#xd;&#xa;var items_costCenter &#x3d; getFromMap&#x28;&#x27;itemCostCenter&#x27;, justificationItem_row&#x29;&#x3b;&#xd;&#xa;var items_projectCode &#x3d; getFromMap&#x28;&#x27;itemProjectCode&#x27;, justificationItem_row&#x29;&#x3b;&#xd;&#xa;var items_id &#x3d; getFromMap&#x28;&#x27;itemId&#x27;, justificationItem_row&#x29;&#x3b;&#xd;&#xa;var items_receiptDate &#x3d; getFromMap&#x28;&#x27;itemReceiptDate&#x27;, justificationItem_row&#x29;&#x3b;&#xa;&#xd;&#xa;if&#x28;items_costType &#x21;&#x3d; null&#x29;&#xd;&#xa;	items_costType &#x3d; JSON.stringify&#x28;items_costType&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;if&#x28;items_costCenter &#x21;&#x3d; null&#x29;&#xd;&#xa;	items_costCenter &#x3d; JSON.stringify&#x28;items_costCenter&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;if&#x28;items_projectCode &#x21;&#x3d; null&#x29;&#xd;&#xa;	items_projectCode &#x3d; JSON.stringify&#x28;items_projectCode&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;if&#x28;items_vatCode &#x21;&#x3d; null&#x29;&#xd;&#xa;	items_vatCode &#x3d; JSON.stringify&#x28;items_vatCode&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>items_description</name>
+        <rename>items_description</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_amount</name>
+        <rename>items_amount</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_vatCode</name>
+        <rename>items_vatCode</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costType</name>
+        <rename>items_costType</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costCenter</name>
+        <rename>items_costCenter</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_projectCode</name>
+        <rename>items_projectCode</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_id</name>
+        <rename>items_id</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_receiptDate</name>
+        <rename>items_receiptDate</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>784</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Parse JustificationItems costCenters, costType, vatCode</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xd;&#xa;  try&#x7b;&#xd;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  catch&#x28;e&#x29;&#x7b;&#xd;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xd;&#xa;   writeToLog&#x28;&#x27;e&#x27;, message&#x29;&#x3b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;&#xd;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  return map&#x5b;key&#x5d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;var items_costCenter_id &#x3d; getFromMap&#x28;&#x27;costCenterId&#x27;, items_costCenter&#x29;&#x3b;&#xd;&#xa;var items_costCenter_description &#x3d; getFromMap&#x28;&#x27;costCenterDescription&#x27;, items_costCenter&#x29;&#x3b;&#xd;&#xa;var items_costCenter_code &#x3d; getFromMap&#x28;&#x27;costCenterExternalLedger&#x27;, items_costCenter&#x29;&#x3b;&#xa;var items_costCenter_active &#x3d; getFromMap&#x28;&#x27;costCenterActive&#x27;, items_costCenter&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;var items_costType_id &#x3d; getFromMap&#x28;&#x27;costTypeId&#x27;, items_costType&#x29;&#x3b;&#xd;&#xa;var items_costType_description &#x3d; getFromMap&#x28;&#x27;costTypeDescription&#x27;, items_costType&#x29;&#x3b;&#xd;&#xa;var items_costType_externalLedger &#x3d; getFromMap&#x28;&#x27;costTypeExternalLedger&#x27;, items_costType&#x29;&#x3b;&#xd;&#xa;var items_costType_active &#x3d; getFromMap&#x28;&#x27;costTypeActive&#x27;, items_costType&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;var items_vatCode_id &#x3d; getFromMap&#x28;&#x27;vatCodeId&#x27;, items_vatCode&#x29;&#x3b;&#xd;&#xa;var items_vatCode_description &#x3d; getFromMap&#x28;&#x27;vatCodeDescription&#x27;, items_vatCode&#x29;&#x3b;&#xd;&#xa;var items_vatCode_code &#x3d; getFromMap&#x28;&#x27;vatCodeCode&#x27;, items_vatCode&#x29;&#x3b;&#xd;&#xa;var items_vatCode_percentage &#x3d; getFromMap&#x28;&#x27;vatCodePercentage&#x27;, items_vatCode&#x29;&#x3b;&#xd;&#xa;var items_vatCode_active &#x3d; getFromMap&#x28;&#x27;vatCodeActive&#x27;, items_vatCode&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>items_costCenter_id</name>
+        <rename>items_costCenter_id</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costCenter_description</name>
+        <rename>items_costCenter_description</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costCenter_code</name>
+        <rename>items_costCenter_code</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costCenter_active</name>
+        <rename>items_costCenter_active</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costType_id</name>
+        <rename>items_costType_id</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costType_description</name>
+        <rename>items_costType_description</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costType_externalLedger</name>
+        <rename>items_costType_externalLedger</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_costType_active</name>
+        <rename>items_costType_active</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_vatCode_id</name>
+        <rename>items_vatCode_id</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_vatCode_description</name>
+        <rename>items_vatCode_description</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_vatCode_code</name>
+        <rename>items_vatCode_code</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_vatCode_percentage</name>
+        <rename>items_vatCode_percentage</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items_vatCode_active</name>
+        <rename>items_vatCode_active</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1424</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Parse Justifications Main</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xd;&#xa;  try&#x7b;&#xd;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  catch&#x28;e&#x29;&#x7b;&#xd;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xd;&#xa;   writeToLog&#x28;&#x27;e&#x27;, message&#x29;&#x3b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;&#xd;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  return map&#x5b;key&#x5d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;var internalTxnId &#x3d; getFromMap&#x28;&#x27;internalTxnId&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var status &#x3d; getFromMap&#x28;&#x27;status&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var cardholderComment &#x3d; getFromMap&#x28;&#x27;cardholderComment&#x27;, justification_row&#x29;&#x3b;&#xa;var submitDate &#x3d; getFromMap&#x28;&#x27;submitDate&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var items &#x3d; getFromMap&#x28;&#x27;items&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var scannedReceipts &#x3d; getFromMap&#x28;&#x27;scannedReceipts&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var voucherId &#x3d; getFromMap&#x28;&#x27;voucherId&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var reviewDate &#x3d; getFromMap&#x28;&#x27;reviewDate&#x27;, justification_row&#x29;&#x3b;&#xd;&#xa;var justificationId &#x3d; getFromMap&#x28;&#x27;justificationId&#x27;, justification_row&#x29;&#x3b;&#xa;&#xd;&#xa;if&#x28;items &#x21;&#x3d; null&#x29;&#xd;&#xa;	items &#x3d; JSON.stringify&#x28;items&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;if&#x28;scannedReceipts &#x21;&#x3d; null&#x29;&#xd;&#xa;	scannedReceipts &#x3d; JSON.stringify&#x28;scannedReceipts&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>internalTxnId</name>
+        <rename>internalTxnId</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>voucherId</name>
+        <rename>voucherId</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>submitDate</name>
+        <rename>submitDate</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>status</name>
+        <rename>status</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>scannedReceipts</name>
+        <rename>scannedReceipts</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>reviewDate</name>
+        <rename>reviewDate</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>justificationId</name>
+        <rename>justificationId</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>items</name>
+        <rename>items</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>cardholderComment</name>
+        <rename>cardholderComment</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>288</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Parse jsonExport</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xd;&#xa;  try&#x7b;&#xd;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  catch&#x28;e&#x29;&#x7b;&#xd;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xd;&#xa;   writeToLog&#x28;&#x27;m&#x27;, message&#x29;&#x3b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;&#xd;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xd;&#xa;   return null&#x3b;&#xd;&#xa;  &#x7d;&#xd;&#xa;  return map&#x5b;key&#x5d;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;var API_settings &#x3d; getFromMap&#x28;&#x27;API_settings&#x27;, jsonExport&#x29;&#x3b;&#xd;&#xa;var X_API_Version &#x3d; null&#x3b; &#x2f;&#x2f;X-API-Version&#xd;&#xa;var contentType &#x3d; null&#x3b;&#xa;var ReturnType &#x3d; null&#x3b;&#xa;&#xd;&#xa;if&#x28;API_settings &#x21;&#x3d; null&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	API_settings &#x3d; JSON.stringify&#x28;API_settings&#x29;&#x3b;&#xd;&#xa;	X_API_Version &#x3d; getFromMap&#x28;&#x27;X-API-Version&#x27;, API_settings&#x29;&#x3b;&#xd;&#xa;	contentType	&#x3d; getFromMap&#x28;&#x27;contentType&#x27;, API_settings&#x29;&#x3b;&#xa;	ReturnType &#x3d; getFromMap&#x28;&#x27;ReturnType&#x27;, jsonExport&#x29;&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>API_settings</name>
+        <rename>API_settings</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>X_API_Version</name>
+        <rename>X-API-Version</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>contentType</name>
+        <rename>contentType</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ReturnType</name>
+        <rename>ReturnType</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>144</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Remove all non-used fields</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>default_jsonCompany</name>
+      </remove>      <remove>        <name>default_jsonExport</name>
+      </remove>      <remove>        <name>Token</name>
+      </remove>      <remove>        <name>jsonCompany_in</name>
+      </remove>      <remove>        <name>jsonExport_in</name>
+      </remove>      <remove>        <name>baseUrl</name>
+      </remove>      <remove>        <name>jsonTransactions_global</name>
+      </remove>      <remove>        <name>jsonTransactions_local</name>
+      </remove>      <remove>        <name>jsonJustifications_local</name>
+      </remove>      <remove>        <name>jsonJustifications_global</name>
+      </remove>      <remove>        <name>jsonTransactions</name>
+      </remove>      <remove>        <name>jsonJustifications</name>
+      </remove>      <remove>        <name>jsonCompany</name>
+      </remove>      <remove>        <name>jsonExport</name>
+      </remove>      <remove>        <name>jsonTrans-isEmpty</name>
+      </remove>      <remove>        <name>jsonJusti_isEmpty</name>
+      </remove>      <remove>        <name>transaction_rows</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1440</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Remove all non-used fields 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>default_jsonCompany</name>
+      </remove>      <remove>        <name>default_jsonExport</name>
+      </remove>      <remove>        <name>Token</name>
+      </remove>      <remove>        <name>jsonCompany_in</name>
+      </remove>      <remove>        <name>jsonExport_in</name>
+      </remove>      <remove>        <name>baseUrl</name>
+      </remove>      <remove>        <name>jsonTransactions_global</name>
+      </remove>      <remove>        <name>jsonTransactions_local</name>
+      </remove>      <remove>        <name>jsonJustifications_local</name>
+      </remove>      <remove>        <name>jsonJustifications_global</name>
+      </remove>      <remove>        <name>jsonTransactions</name>
+      </remove>      <remove>        <name>jsonJustifications</name>
+      </remove>      <remove>        <name>jsonCompany</name>
+      </remove>      <remove>        <name>jsonExport</name>
+      </remove>      <remove>        <name>jsonTrans-isEmpty</name>
+      </remove>      <remove>        <name>jsonJusti_isEmpty</name>
+      </remove>      <remove>        <name>API_settings</name>
+      </remove>      <remove>        <name>X-API-Version</name>
+      </remove>      <remove>        <name>contentType</name>
+      </remove>      <remove>        <name>justification_row</name>
+      </remove>      <remove>        <name>items</name>
+      </remove>      <remove>        <name>justificationItem_row</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1680</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rename and Convert </name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>internalTxnId</name>
+        <rename>internalTxnId_from_transactions</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Date and time</name>
+        <rename>Date and time</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd&#x27;T&#x27;HH&#x3a;mm&#x3a;ss.SSSZ</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>800</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set local date</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>Date and time</name>
+        <rename>Date and time</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy&#x2f;MM&#x2f;dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>nl_NL</date_format_locale>
+        <date_format_timezone>Europe&#x2f;Amsterdam</date_format_timezone>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1040</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Settings 2</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>default_jsonCompany</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&#x7b;&#xa;	&#x22;justificationTypes&#x22;&#x3a; &#x5b;&#x22;APPROVED&#x22;&#x5d;, &#xa;	&#x22;simpledJournalTypeId&#x22;&#x3a; &#x22;Memoriaal&#x22;,&#xa;	&#x22;journalCode&#x22;&#x3a; &#x22;200&#x22;, &#xa;	&#x22;journalType&#x22;&#x3a; &#x22;M&#x22;,&#xa;	&#x22;messageToUser&#x22;&#x3a; &#x22;De CSV is klaar en wordt gedownload&#x22;,&#xa;	&#x22;customErrorMessage&#x22;&#x3a; &#x22;unidentified error inside Kettle-Pentaho Script&#x22;,&#xa;	&#x22;amounts_excl_vat&#x22;&#x3a; &#x22;false&#x22;,&#xa;	&#x22;debug_mode&#x22;&#x3a; &#x22;1&#x22;,&#xa;         &#x22;txnFilter_on_date_or_approvalDate&#x22;&#x3a;&#x22;date&#x22;, &#xa;        &#x22;Cost_Unit_Split&#x22; &#x3a; &#x22;&#x2f;&#x22; &#x7d;</nullif>
+        <length>1000</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>default_jsonExport</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&#x7b;&#xa;	&#x22;API_settings&#x22;&#x3a;&#x7b;&#xa;			&#x22;X-API-Version&#x22;&#x3a;&#x22;1.0&#x22;, &#xa;			&#x22;contentType&#x22;&#x3a;&#x22;application&#x2f;json&#x3b;charset&#x3d;UTF-8&#x22;&#xa;			&#x7d;,&#xa;	&#x22;ReturnType&#x22;&#x3a; &#x22;SendAsFile&#x22;	&#xa;&#x7d; </nullif>
+        <length>1000</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>AllowedJustificationTypes</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&#x22;INEXISTENT&#x22;,&#x22;DRAFT&#x22;,&#x22;OPEN_FOR_REVIEW&#x22;,&#x22;ASSIGNED_FOR_REVIEW&#x22;,&#x22;APPROVED&#x22;,&#x22;REJECTED&#x22;</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>144</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>internalTxnId_from_transactions</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1680</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>internalTxnId</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>912</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>TransactionRows</name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <IsIgnoreEmptyFile>Y</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <rownum_field/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>transaction_rows</name>
+        <path>&#x2a;</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField>jsonTransactions</valueField>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>448</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>clean before transaction total</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>internalTxnId</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>items_amount</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>items_amount</name>
+        <rename>items_amount</rename>
+        <type>Number</type>
+        <length>12</length>
+        <precision>10</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>true</lenient_string_to_number>
+        <encoding>UTF-8</encoding>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type>normal</storage_type>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>912</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>clean before transaction total 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>AmountForeignCurrency</name>
+        <rename>AmountForeignCurrency</rename>
+        <type>Number</type>
+        <length>12</length>
+        <precision>10</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;&#x23;&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>true</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>true</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1488</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>parse Transactions</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#x2f;&#x2f;key &#x3d; field we want to parse, jsonRow &#x3d; row in transaction.&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xa;  try&#x7b;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xa;  &#x7d;&#xa;  catch&#x28;e&#x29;&#x7b;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xa;   writeToLog&#x28;&#x27;e&#x27;, message&#x29;&#x3b;&#xa;   return null&#x3b;&#xa;  &#x7d;&#xa;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xa;   return null&#x3b;&#xa;  &#x7d;&#xa;  return map&#x5b;key&#x5d;&#xa;&#x7d;&#xa;&#xd;&#xa;var	date_and_time &#x3d; getFromMap&#x28;&#x27;txnDate&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	cardNumber &#x3d; getFromMap&#x28;&#x27;cardNumber&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	txnType &#x3d; getFromMap&#x28;&#x27;txnType&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	txnType2 &#x3d; getFromMap&#x28;&#x27;txnType2&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	bookName &#x3d; getFromMap&#x28;&#x27;bookName&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	bookLedger &#x3d; getFromMap&#x28;&#x27;bookLedger&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	bookCostCenter &#x3d; getFromMap&#x28;&#x27;bookCostCenter&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	generalLedgerName &#x3d; getFromMap&#x28;&#x27;generalLedgerName&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	generalLedger &#x3d; getFromMap&#x28;&#x27;generalLedger&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	generalCostCenter &#x3d; getFromMap&#x28;&#x27;generalCostCenter&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	txnAmount &#x3d; getFromMap&#x28;&#x27;billingAmount&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	txn_description &#x3d; getFromMap&#x28;&#x27;description&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	industryCode &#x3d; getFromMap&#x28;&#x27;industryCode&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	industryCodeDescription &#x3d; getFromMap&#x28;&#x27;industryCodeDescription&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	cardholderName &#x3d; getFromMap&#x28;&#x27;cardholderName&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	reference1 &#x3d; getFromMap&#x28;&#x27;reference1&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	reference2 &#x3d; getFromMap&#x28;&#x27;reference2&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	reference3 &#x3d; getFromMap&#x28;&#x27;reference3&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	accountName &#x3d; getFromMap&#x28;&#x27;accountName&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	accountGeneralLedger &#x3d; getFromMap&#x28;&#x27;accountGeneralLedger&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	accountCostCenter &#x3d; getFromMap&#x28;&#x27;accountCostCenter&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	txnCountry &#x3d; getFromMap&#x28;&#x27;txnCountry&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var internalTxnId &#x3d; getFromMap&#x28;&#x27;internalTxnId&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	originalTxnAmount &#x3d; getFromMap&#x28;&#x27;originalTxnAmount&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	originalTxnCurrency &#x3d; getFromMap&#x28;&#x27;originalTxnCurrency&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	reconciliationDate &#x3d; getFromMap&#x28;&#x27;reconciliationDate&#x27;, transaction_rows&#x29;&#x3b;&#xd;&#xa;var	paymentReference &#x3d; getFromMap&#x28;&#x27;paymentReference&#x27;, transaction_rows&#x29;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>date_and_time</name>
+        <rename>Date and time</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>cardNumber</name>
+        <rename>cardNumber</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>txnType</name>
+        <rename>txnType</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>txnType2</name>
+        <rename>txnType2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>bookName</name>
+        <rename>bookName</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>bookLedger</name>
+        <rename>bookLedger</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>bookCostCenter</name>
+        <rename>bookCostCenter</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>generalLedgerName</name>
+        <rename>generalLedgerName</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>generalLedger</name>
+        <rename>generalLedger</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>generalCostCenter</name>
+        <rename>generalCostCenter</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>txnAmount</name>
+        <rename>txnAmount</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>txn_description</name>
+        <rename>txn_description</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>industryCode</name>
+        <rename>industryCode</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>industryCodeDescription</name>
+        <rename>industryCodeDescription</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>cardholderName</name>
+        <rename>cardholderName</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>reference1</name>
+        <rename>reference1</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>reference2</name>
+        <rename>reference2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>reference3</name>
+        <rename>reference3</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>accountName</name>
+        <rename>accountName</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>accountGeneralLedger</name>
+        <rename>accountGeneralLedger</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>accountCostCenter</name>
+        <rename>accountCostCenter</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>txnCountry</name>
+        <rename>txnCountry</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>originalTxnAmount</name>
+        <rename>originalTxnAmount</rename>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>12</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>originalTxnCurrency</name>
+        <rename>originalTxnCurrency</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>internalTxnId</name>
+        <rename>internalTxnId</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>reconciliationDate</name>
+        <rename>reconciliationDate</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>paymentReference</name>
+        <rename>paymentReference</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>640</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>parse jsonCompany</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#x2f;&#x2f;key &#x3d; field we want to parse, jsonRow &#x3d; row in transaction.&#xa;function getFromMap&#x28;key,jsonRow&#x29;&#x7b;&#xa;  try&#x7b;&#xa;   var map &#x3d; JSON.parse&#x28;jsonRow&#x29;&#x3b;&#xa;  &#x7d;&#xa;  catch&#x28;e&#x29;&#x7b;&#xa;   var message &#x3d; &#x22;Unparsable JSON&#x3a; &#x22;&#x2b;jsonRow&#x2b;&#x22; Desc&#x3a; &#x22;&#x2b;e.message&#x3b;&#xa;   writeToLog&#x28;&#x27;m&#x27;, message&#x29;&#x3b;&#xa;   return null&#x3b;&#xa;  &#x7d;&#xa;&#xa;  if&#x28;map&#x5b;key&#x5d; &#x3d;&#x3d; undefined&#x29;&#x7b;&#xa;   return null&#x3b;&#xa;  &#x7d;&#xa;  return map&#x5b;key&#x5d;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;var txnDate &#x3d; null&#x3b;&#xa;&#xa;var justificationTypes &#x3d; null&#x3b;&#xa;var journalCode &#x3d; null&#x3b;&#xa;var journalType &#x3d; null&#x3b;&#xa;var messageToUser &#x3d; null&#x3b;&#xa;var	customErrorField &#x3d; null&#x3b;&#xa;var	simpledJournalTypeId &#x3d; null&#x3b;&#xa;var	amounts_excl_vat &#x3d; null&#x3b;&#xa;var	debug_mode &#x3d; null&#x3b;&#xa;var	txnFilter_on_date_or_approvalDate &#x3d; null&#x3b;&#xa;var	Cost_Unit_Split &#x3d; null&#x3b;&#xa;var vat_high_ledger &#x3d; null&#x3b;&#xd;&#xa;var vat_low_ledger &#x3d; null&#x3b;&#xd;&#xa;var cost_code_splitter &#x3d; null&#x3b;&#xd;&#xa;var include_work_code &#x3d; null&#x3b;&#xd;&#xa;&#xa;if&#x28;jsonCompany &#x21;&#x3d; null&#x29;&#xa;&#x7b;&#xa;	&#x2f;&#x2f;jsonCompany &#x3d; JSON.stringify&#x28;jsonCompany&#x29;&#x3b;&#xa;	&#x2f;&#x2f;justificationTypes mist nog.&#xa;	justificationTypes &#x3d; getFromMap&#x28;&#x27;justificationTypes&#x27;, jsonCompany&#x29;&#x3b;&#xa;	journalCode &#x3d; getFromMap&#x28;&#x27;journalCode&#x27;, jsonCompany&#x29;&#x3b;&#xa;	journalType &#x3d; getFromMap&#x28;&#x27;journalType&#x27;, jsonCompany&#x29;&#x3b;&#xa;	messageToUser &#x3d; getFromMap&#x28;&#x27;messageToUser&#x27;, jsonCompany&#x29;&#x3b;&#xa;	customErrorField &#x3d; getFromMap&#x28;&#x27;customErrorMessage&#x27;, jsonCompany&#x29;&#x3b;&#xa;	simpledJournalTypeId &#x3d; getFromMap&#x28;&#x27;simpledJournalTypeId&#x27;, jsonCompany&#x29;&#x3b;&#xa;	amounts_excl_vat &#x3d; getFromMap&#x28;&#x27;amounts_excl_vat&#x27;, jsonCompany&#x29;&#x3b;&#xa;	debug_mode &#x3d; getFromMap&#x28;&#x27;debug_mode&#x27;, jsonCompany&#x29;&#x3b;&#xa;	txnFilter_on_date_or_approvalDate &#x3d; getFromMap&#x28;&#x27;txnFilter_on_date_or_approvalDate&#x27;, jsonCompany&#x29;&#x3b;&#xa;	Cost_Unit_Split &#x3d; getFromMap&#x28;&#x27;Cost_Unit_Split&#x27;, jsonCompany&#x29;&#x3b;&#xd;&#xa;	vat_high_ledger &#x3d; getFromMap&#x28;&#x27;vat_high_ledger&#x27;,jsonCompany&#x29;&#x3b;&#xd;&#xa;	vat_low_ledger &#x3d; getFromMap&#x28;&#x27;vat_low_ledger&#x27;,jsonCompany&#x29;&#x3b;&#xd;&#xa;	cost_code_splitter &#x3d; getFromMap&#x28;&#x27;cost_code_splitter&#x27;,jsonCompany&#x29;&#x3b;&#xd;&#xa;	include_work_code &#x3d; getFromMap&#x28;&#x27;include_work_code&#x27;,jsonCompany&#x29;&#x3b;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>justificationTypes</name>
+        <rename>justificationTypes</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>journalCode</name>
+        <rename>journalCode</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>journalType</name>
+        <rename>journalType</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>messageToUser</name>
+        <rename>messageToUser</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>customErrorField</name>
+        <rename>customErrorField</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>simpledJournalTypeId</name>
+        <rename>simpledJournalTypeId</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>amounts_excl_vat</name>
+        <rename>amounts_excl_vat</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>debug_mode</name>
+        <rename>debug_mode</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>txnFilter_on_date_or_approvalDate</name>
+        <rename>txnFilter_on_date_or_approvalDate</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>Cost_Unit_Split</name>
+        <rename>Cost_Unit_Split</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>vat_high_ledger</name>
+        <rename>vat_high_ledger</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>vat_low_ledger</name>
+        <rename>vat_low_ledger</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>cost_code_splitter</name>
+        <rename>cost_code_splitter</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>include_work_code</name>
+        <rename>include_work_code</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>288</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

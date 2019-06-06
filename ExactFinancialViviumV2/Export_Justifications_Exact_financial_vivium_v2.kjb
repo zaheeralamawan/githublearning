@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>Export_Justifications_Exact_financial_vivium.kjb</name>
+    <description/>
+    <extended_description/>
+    <job_version/>
+    <job_status>0</job_status>
+  <directory>&#x2f;</directory>
+  <created_user>-</created_user>
+  <created_date>2015&#x2f;07&#x2f;05 13&#x3a;38&#x3a;58.386</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2015&#x2f;07&#x2f;05 13&#x3a;38&#x3a;58.386</modified_date>
+    <parameters>
+        <parameter>
+            <name>Token</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>baseUrl</name>
+            <default_value>https&#x3a;&#x2f;&#x2f;demo.simpledcard.com&#x3a;8080&#x2f;ws&#x2f;</default_value>
+            <description>https&#x3a;&#x2f;&#x2f;demo.simpledcard.com&#x3a;8080&#x2f;ws&#x2f;</description>
+        </parameter>
+        <parameter>
+            <name>companyId</name>
+            <default_value>323090</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>companyName</name>
+            <default_value>globalOrange</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>endDate</name>
+            <default_value>2016-10-30T21&#x3a;59&#x3a;59.999Z</default_value>
+            <description>2017-10-31T21&#x3a;59&#x3a;59.999Z</description>
+        </parameter>
+        <parameter>
+            <name>journalCode</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonCompany</name>
+            <default_value>&#x7b;&#x22;justificationTypes&#x22;&#x3a;&#x5b;&#x22;APPROVED&#x22;&#x5d;,&#x22;simpledJournalTypeId&#x22;&#x3a;&#x22;Memoriaal&#x22;,&#x22;journalCode&#x22;&#x3a;&#x22;90&#x22;,&#x22;journalType&#x22;&#x3a;&#x22;M&#x22;,&#x22;messageToUser&#x22;&#x3a;&#x22;De CSV is klaar en wordt gedownload&#x22;,&#x22;customErrorMessage&#x22;&#x3a;&#x22;unidentified error inside Kettle-Pentaho Script&#x22;,&#x22;vat_high_ledger&#x22;&#x3a;&#x22;1111&#x22;,&#x22;vat_low_ledger&#x22;&#x3a;&#x22;2222&#x22;,&#x22;amounts_excl_vat&#x22;&#x3a;&#x22;true&#x22;,&#x22;Financials&#x22;&#x3a;&#x22;true&#x22;,&#x22;costUnitSplitter&#x22;&#x3a;&#x22;&#x2f;&#x22;,&#x22;periodBasedOn&#x22;&#x3a;&#x22;date&#x22;,&#x22;txnFilter_on_date_or_approvalDate&#x22;&#x3a;&#x22;approvalDate&#x22;,&#x22;numberCutOffDays&#x22;&#x3a;&#x22;10&#x22;,&#x22;lineSeparatorOutput&#x22;&#x3a;&#x22;&#x3b;&#x22;,&#x22;maxPageNum&#x22;&#x3a;&#x22;2&#x22;&#x7d;</default_value>
+            <description>&#x7b;    &#x22;justificationTypes&#x22;&#x3a; &#x5b;&#x22;APPROVED&#x22;&#x5d;,     &#x22;simpledJournalTypeId&#x22;&#x3a; &#x22;Memoriaal&#x22;,    &#x22;journalCode&#x22;&#x3a; &#x22;90&#x22;,     &#x22;journalType&#x22;&#x3a; &#x22;M&#x22;,    &#x22;messageToUser&#x22;&#x3a; &#x22;De CSV is klaar en wordt gedownload&#x22;,    &#x22;customErrorMessage&#x22;&#x3a; &#x22;unidentified error inside Kettle-Pentaho Script&#x22;,    &#x22;vat_high_ledger&#x22; &#x3a; &#x22;1111&#x22;,    &#x22;vat_low_ledger&#x22; &#x3a; &#x22;2222&#x22;,&#x22;amounts_excl_vat&#x22;&#x3a; &#x22;true&#x22;,&#x22;Financials&#x22;&#x3a; &#x22;true&#x22;,&#x22;costUnitSplitter&#x22;&#x3a; &#x22;&#x2f;&#x22;,&#x22;lineSeparatorOutput&#x22;&#x3a; &#x22;&#x3b;&#x22;&#x7d;</description>
+        </parameter>
+        <parameter>
+            <name>jsonExport</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonJustifications</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>jsonTransactions</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>startDate</name>
+            <default_value>2016-03-25T22&#x3a;00&#x3a;00.000Z</default_value>
+            <description>2017-01-01T22&#x3a;00&#x3a;00.000Z</description>
+        </parameter>
+        <parameter>
+            <name>transactionIdentifier</name>
+            <default_value>123</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>userId</name>
+            <default_value>1</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>userName</name>
+            <default_value>Erik Seveke</default_value>
+            <description/>
+        </parameter>
+    </parameters>
+    <slaveservers>
+    </slaveservers>
+<job-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
+<jobentry-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>COPY_NR</id><enabled>N</enabled><name>COPY_NR</name></field></jobentry-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+   <pass_batchid>N</pass_batchid>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>48</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1264</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Get token</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;GetToken.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+            <parameter>            <name>Token</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>baseUrl</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>companyId</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>companyName</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>endDate</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonCompany</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonExport</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>startDate</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>transactionIdentifier</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>userId</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>userName</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonJustifications</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonTransactions</name>
+            <stream_name/>
+            <value/>
+            </parameter>      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>176</xloc>
+      <yloc>240</yloc>
+      </entry>
+    <entry>
+      <name>Token contains Bearer</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>Token</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>bearer</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>contains</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>176</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>JSON_TRANSACTIONS is present</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>JSONTRANSACTIONS</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>txnDate</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>contains</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>Y</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>496</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Send response</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;sendResponse.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>Y</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1136</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>log Error in Transformation</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>&#x22;Report could not be generated at this time, please contact Support.&#x22;</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>Error in Transformation</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>960</xloc>
+      <yloc>240</yloc>
+      </entry>
+    <entry>
+      <name>log Error in GetJson</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>&#x22;Report could not be generated at this time, please contact Support.&#x22;</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>Error in GetJson</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>320</xloc>
+      <yloc>240</yloc>
+      </entry>
+    <entry>
+      <name>Set variables 2 2</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>CUSTOMERRORFIELD</variable_name>
+          <variable_value>&#x22;Sorry&#x21; Report could not be generated at this time, please contact Support.&#x22;</variable_value>
+          <variable_type>ROOT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>MESSAGETOUSER</variable_name>
+          <variable_value>&#x22;Sorry&#x21; Report could not be generated at this time, please contact Support.&#x22;</variable_value>
+          <variable_type>ROOT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>RETURNTYPE</variable_name>
+          <variable_value>SendAsFile</variable_value>
+          <variable_type>ROOT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>STATUSCODE</variable_name>
+          <variable_value>SUCCESS</variable_value>
+          <variable_type>ROOT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>TRANSACTIONIDENTIFIER</variable_name>
+          <variable_value>&#x24;&#x7b;transactionIdentifier&#x7d;</variable_value>
+          <variable_type>ROOT_JOB</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>416</yloc>
+      </entry>
+    <entry>
+      <name>DUMMY</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1136</xloc>
+      <yloc>416</yloc>
+      </entry>
+    <entry>
+      <name>log Error in ParseJson</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>&#x22;Report could not be generated at this time, please contact Support.&#x22;</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>Error in ParseJson</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>240</yloc>
+      </entry>
+    <entry>
+      <name>log Error in Cost unit Split</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>&#x22;Report could not be generated at this time, please contact Support.&#x22;</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>Error in Transformation</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>784</xloc>
+      <yloc>240</yloc>
+      </entry>
+    <entry>
+      <name>Error in JsonComapny</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>&#x22;Report could not be generated at this time, please contact Support.&#x22;</logmessage>
+      <loglevel>Error</loglevel>
+      <logsubject>Error in JsonComapny</logsubject>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>496</xloc>
+      <yloc>240</yloc>
+      </entry>
+    <entry>
+      <name>Trans Exact Financials</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;Export_Justifications_Exact_financial_vivium_v2.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+            <parameter>            <name>Token</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>baseUrl</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>companyId</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>companyName</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>endDate</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonCompany</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonExport</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>startDate</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>transactionIdentifier</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>userId</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>userName</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonJustifications</name>
+            <stream_name/>
+            <value/>
+            </parameter>            <parameter>            <name>jsonTransactions</name>
+            <stream_name/>
+            <value/>
+            </parameter>      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>960</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Cost unit Split</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <valuetype>variable</valuetype>
+      <fieldname>Financials</fieldname>
+      <variablename>&#x24;&#x7b;COST_UNIT_SPLIT&#x7d;</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>&#x2f;</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>784</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Job</name>
+      <description/>
+      <type>JOB</type>
+      <specification_method>filename</specification_method>
+      <job_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;GetJson_Vivium_v3.kjb</filename>
+      <jobname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>320</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Job 2</name>
+      <description/>
+      <type>JOB</type>
+      <specification_method>filename</specification_method>
+      <job_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;ParseJsons_Vivium_v3.kjb</filename>
+      <jobname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>640</xloc>
+      <yloc>80</yloc>
+      </entry>
+    <entry>
+      <name>Job 3</name>
+      <description/>
+      <type>JOB</type>
+      <specification_method>filename</specification_method>
+      <job_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;JobDeleteFolder.kjb</filename>
+      <jobname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1200</xloc>
+      <yloc>80</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>log Error in Cost unit Split</from>
+      <to>Set variables 2 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Token contains Bearer</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Token contains Bearer</from>
+      <to>Get token</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>log Error in GetJson</from>
+      <to>Set variables 2 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error in JsonComapny</from>
+      <to>Set variables 2 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>log Error in ParseJson</from>
+      <to>Set variables 2 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>log Error in Transformation</from>
+      <to>Set variables 2 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables 2 2</from>
+      <to>DUMMY</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DUMMY</from>
+      <to>Send response</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>JSON_TRANSACTIONS is present</from>
+      <to>Error in JsonComapny</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Trans Exact Financials</from>
+      <to>log Error in Transformation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Trans Exact Financials</from>
+      <to>Send response</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Cost unit Split</from>
+      <to>log Error in Cost unit Split</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Cost unit Split</from>
+      <to>Trans Exact Financials</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Job</from>
+      <to>JSON_TRANSACTIONS is present</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Token contains Bearer</from>
+      <to>Job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Get token</from>
+      <to>Job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Job</from>
+      <to>log Error in GetJson</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Job 2</from>
+      <to>Cost unit Split</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>JSON_TRANSACTIONS is present</from>
+      <to>Job 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Job 2</from>
+      <to>log Error in ParseJson</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Send response</from>
+      <to>Job 3</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Job 3</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+<attributes><group><name>JobRestart</name>
+<attribute><key>UniqueConnections</key>
+<value>N</value>
+</attribute></group></attributes>
+
+</job>
